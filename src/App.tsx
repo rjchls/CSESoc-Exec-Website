@@ -6,7 +6,7 @@ import Footer from "./components/Footer";
 
 export default function App() {
   return (
-    <div className="w-full overflow-x-hidden bg-cream">
+    <div className="w-full bg-cream">
       <Hero />
       <About />
       <Experience />
