@@ -17,7 +17,7 @@ export default function About() {
             On top that, I'm also one of the current Socials Directors for
             CSESoc.
           </p>
-          <p className="font-accent text-lg font-semibold text-accent italic sm:text-xl">
+          <p className="font-body text-lg font-bold text-accent sm:text-xl">
             and I am running for the 2027 Executive Positions: Co-President
             and Vice President of Externals
           </p>
