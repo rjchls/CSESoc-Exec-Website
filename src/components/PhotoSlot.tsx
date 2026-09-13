@@ -1,9 +1,12 @@
+import type { CSSProperties } from "react";
+
 type PhotoSlotProps = {
   src?: string;
   alt: string;
   label: string;
   className?: string;
   dark?: boolean;
+  style?: CSSProperties;
 };
 
 /**
@@ -11,9 +14,9 @@ type PhotoSlotProps = {
  * parent component and pass it as `src` — the placeholder box is replaced
  * by the real <img> automatically.
  */
-export default function PhotoSlot({ src, alt, label, className = "", dark = false }: PhotoSlotProps) {
+export default function PhotoSlot({ src, alt, label, className = "", dark = false, style }: PhotoSlotProps) {
   if (src) {
-    return <img src={src} alt={alt} className={`object-cover ${className}`} />;
+    return <img src={src} alt={alt} style={style} className={`object-cover ${className}`} />;
   }
 
   return (

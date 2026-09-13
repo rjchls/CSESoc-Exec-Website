@@ -2,7 +2,10 @@ import PhotoSlot from "./PhotoSlot";
 
 export default function About() {
   return (
-    <section id="about" className="grid w-full grid-cols-1 md:grid-cols-2">
+    <section
+      id="about"
+      className="relative z-10 -mt-[18vh] grid w-full grid-cols-1 shadow-[0_-40px_60px_-20px_rgba(0,0,0,0.35)] md:grid-cols-2"
+    >
       <div className="flex flex-col justify-center bg-ink px-6 py-20 text-paper sm:px-10 md:py-0">
         <h2 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-none text-paper uppercase">
           Heya!!!
