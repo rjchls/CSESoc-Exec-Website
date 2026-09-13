@@ -1,0 +1,39 @@
+import PhotoSlot from "./PhotoSlot";
+
+export default function About() {
+  return (
+    <section id="about" className="grid w-full grid-cols-1 md:grid-cols-2">
+      <div className="flex flex-col justify-center bg-ink px-6 py-20 text-paper sm:px-10 md:py-0">
+        <h2 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-none text-paper uppercase">
+          Heya!!!
+        </h2>
+
+        <div className="mt-8 max-w-md space-y-6 font-body text-base leading-relaxed text-paper/85 sm:text-lg">
+          <p>
+            I'm Ryne (niche name right 😆) and I'm currently a second year
+            studying Computer Science / Electrical Engineering!
+          </p>
+          <p>
+            On top that, I'm also one of the current Socials Directors for
+            CSESoc.
+          </p>
+          <p className="font-accent text-lg font-semibold text-accent italic sm:text-xl">
+            and I am running for the 2027 Executive Positions: Co-President
+            and Vice President of Externals
+          </p>
+        </div>
+      </div>
+
+      <div className="relative min-h-[420px] bg-cream-dark md:min-h-0">
+        <PhotoSlot
+          alt="Ryne with friends"
+          label="About photo — group/candid shot (replace in About.tsx)"
+          className="h-full w-full"
+        />
+        <span className="absolute right-4 bottom-4 font-body text-sm font-semibold text-accent sm:right-6 sm:bottom-6">
+          09
+        </span>
+      </div>
+    </section>
+  );
+}

@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cream: #efe7d5;
+  --color-cream-dark: #e3d8bd;
+  --color-ink: #14120f;
+  --color-ink-soft: #1e1b16;
+  --color-paper: #f6f1e4;
+  --color-accent: #e07a3f;
+
+  --font-display: "Anton", sans-serif;
+  --font-accent: "Playfair Display", serif;
+  --font-body: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-ink);
+}
