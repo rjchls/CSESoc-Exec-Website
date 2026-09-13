@@ -31,3 +31,14 @@ body {
   background-color: var(--color-accent);
   color: var(--color-ink);
 }
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  50.01%,
+  100% {
+    opacity: 0;
+  }
+}

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import heroPhoto from "../assets/photos/hero.jpg";
 import PhotoSlot from "./PhotoSlot";
 import Navbar from "./Navbar";
+import Typewriter from "./Typewriter";
 
 // Extra scroll distance (beyond one viewport height) the hero stays pinned
 // for, while it blurs out and the next section slides up over it.
@@ -78,7 +79,7 @@ export default function Hero() {
               <span className="block text-[clamp(3rem,13vw,10rem)]">Echaluse</span>
             </h1>
             <p className="mt-4 font-body text-sm font-medium tracking-[0.2em] text-paper/90 uppercase sm:text-base">
-              Vote me for Co-President and VPE
+              <Typewriter text="Vote me for Co-President and VPE" />
             </p>
           </div>
         </div>
