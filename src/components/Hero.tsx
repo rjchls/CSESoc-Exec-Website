@@ -62,7 +62,7 @@ export default function Hero() {
           className="absolute inset-0 h-full w-full object-top"
           style={{
             filter: `blur(${progress * 14}px)`,
-            transform: `scale(${1 + progress * 0.06})`,
+            transform: `scale(${1 + progress * 0.06}) translateY(${progress * 40}px)`,
           }}
         />
         <div
@@ -72,7 +72,13 @@ export default function Hero() {
 
         <Navbar />
 
-        <div className="relative z-10 w-full px-6 pb-10 sm:px-10 sm:pb-14">
+        <div
+          className="relative z-10 w-full px-6 pb-10 sm:px-10 sm:pb-14"
+          style={{
+            opacity: Math.max(0, 1 - progress * 2.2),
+            transform: `translateY(${progress * 30}px)`,
+          }}
+        >
           <h1 className="font-display leading-[0.85] text-paper uppercase">
             <span className="mb-[0.08em] block text-[clamp(3rem,13vw,10rem)]">Ryne</span>
             <span className="block text-[clamp(3rem,13vw,10rem)]">Echaluse</span>
