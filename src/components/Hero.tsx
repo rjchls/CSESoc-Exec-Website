@@ -56,7 +56,14 @@ export default function Hero({ wrapperRef, progress, pin }: HeroProps) {
           </div>
         </div>
 
-        <Navbar />
+        <div
+          style={{
+            opacity: Math.max(0, 1 - progress * 1.3),
+            pointerEvents: progress > 0.75 ? "none" : "auto",
+          }}
+        >
+          <Navbar />
+        </div>
       </section>
     </div>
   );
