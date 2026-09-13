@@ -21,7 +21,7 @@ export default function About() {
             CSESoc...
           </p>
           <p className="font-body text-lg font-bold text-accent sm:text-xl">
-            and I am running for Co-President and Vice President of Externals
+            and I am running for the roles Co-President and Vice President of Externals
           </p>
         </div>
       </div>

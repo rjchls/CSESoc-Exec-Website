@@ -3,31 +3,62 @@ import { useEffect, useState } from "react";
 type TypewriterProps = {
   text: string;
   className?: string;
-  speedMs?: number;
-  startDelayMs?: number;
+  typeSpeedMs?: number;
+  deleteSpeedMs?: number;
+  pauseAfterTypeMs?: number;
+  pauseBeforeTypeMs?: number;
 };
 
-export default function Typewriter({ text, className = "", speedMs = 40, startDelayMs = 400 }: TypewriterProps) {
+type Phase = "waiting" | "typing" | "pausedTyped" | "deleting";
+
+export default function Typewriter({
+  text,
+  className = "",
+  typeSpeedMs = 40,
+  deleteSpeedMs = 25,
+  pauseAfterTypeMs = 1800,
+  pauseBeforeTypeMs = 500,
+}: TypewriterProps) {
   const [count, setCount] = useState(0);
+  const [phase, setPhase] = useState<Phase>("waiting");
 
   useEffect(() => {
     setCount(0);
-    let i = 0;
-    let interval: ReturnType<typeof setInterval>;
+    setPhase("waiting");
+  }, [text]);
 
-    const start = setTimeout(() => {
-      interval = setInterval(() => {
-        i++;
-        setCount(i);
-        if (i >= text.length) clearInterval(interval);
-      }, speedMs);
-    }, startDelayMs);
+  useEffect(() => {
+    const delay =
+      phase === "typing"
+        ? typeSpeedMs
+        : phase === "deleting"
+          ? deleteSpeedMs
+          : phase === "pausedTyped"
+            ? pauseAfterTypeMs
+            : pauseBeforeTypeMs;
 
-    return () => {
-      clearTimeout(start);
-      clearInterval(interval);
-    };
-  }, [text, speedMs, startDelayMs]);
+    const timeout = setTimeout(() => {
+      if (phase === "waiting") {
+        setPhase("typing");
+      } else if (phase === "typing") {
+        if (count < text.length) {
+          setCount((c) => c + 1);
+        } else {
+          setPhase("pausedTyped");
+        }
+      } else if (phase === "pausedTyped") {
+        setPhase("deleting");
+      } else if (phase === "deleting") {
+        if (count > 0) {
+          setCount((c) => c - 1);
+        } else {
+          setPhase("waiting");
+        }
+      }
+    }, delay);
+
+    return () => clearTimeout(timeout);
+  }, [count, phase, text, typeSpeedMs, deleteSpeedMs, pauseAfterTypeMs, pauseBeforeTypeMs]);
 
   return (
     <span className={className}>
