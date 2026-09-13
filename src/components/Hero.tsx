@@ -1,3 +1,4 @@
+import heroPhoto from "../assets/photos/herophoto.jpg";
 import PhotoSlot from "./PhotoSlot";
 import Navbar from "./Navbar";
 
@@ -5,6 +6,7 @@ export default function Hero() {
   return (
     <section className="relative flex min-h-screen w-full items-end overflow-hidden bg-ink">
       <PhotoSlot
+        src={heroPhoto}
         alt="Ryne Echaluse"
         label="Hero photo — portrait/landscape shot, full-bleed background (replace in Hero.tsx)"
         dark

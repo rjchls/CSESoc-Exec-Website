@@ -11,15 +11,14 @@ export default function About() {
         <div className="mt-8 max-w-md space-y-6 font-body text-base leading-relaxed text-paper/85 sm:text-lg">
           <p>
             I'm Ryne (niche name right 😆) and I'm currently a second year
-            studying Computer Science / Electrical Engineering!
+            studying Computer Science / Electrical Engineering !
           </p>
           <p>
             On top that, I'm also one of the current Socials Directors for
-            CSESoc.
+            CSESoc...
           </p>
           <p className="font-body text-lg font-bold text-accent sm:text-xl">
-            and I am running for the 2027 Executive Positions: Co-President
-            and Vice President of Externals
+            and I am running for Co-President and Vice President of Externals
           </p>
         </div>
       </div>
