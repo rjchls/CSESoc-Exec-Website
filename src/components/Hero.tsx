@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import type { RefObject } from "react";
 import heroPhoto from "../assets/photos/hero.jpg";
 import PhotoSlot from "./PhotoSlot";
 import Navbar from "./Navbar";
@@ -6,43 +6,15 @@ import Typewriter from "./Typewriter";
 
 // Extra scroll distance (beyond one viewport height) the hero stays pinned
 // for, while it blurs out and the next section slides up over it.
-const PIN_VH = 55;
+export const PIN_VH = 55;
 
-export default function Hero() {
-  const wrapperRef = useRef<HTMLDivElement>(null);
-  const [progress, setProgress] = useState(0);
-  const [pin, setPin] = useState({ pinned: true, scrollable: 0 });
+type HeroProps = {
+  wrapperRef: RefObject<HTMLDivElement | null>;
+  progress: number;
+  pin: { pinned: boolean; scrollable: number };
+};
 
-  useEffect(() => {
-    let ticking = false;
-
-    const update = () => {
-      ticking = false;
-      const wrapper = wrapperRef.current;
-      if (!wrapper) return;
-      const scrollable = Math.max(0, wrapper.offsetHeight - window.innerHeight);
-      const y = window.scrollY;
-      const raw = scrollable > 0 ? y / scrollable : 0;
-      setProgress(Math.min(1, Math.max(0, raw)));
-      setPin({ pinned: y < scrollable, scrollable });
-    };
-
-    const onScroll = () => {
-      if (!ticking) {
-        ticking = true;
-        requestAnimationFrame(update);
-      }
-    };
-
-    update();
-    window.addEventListener("scroll", onScroll, { passive: true });
-    window.addEventListener("resize", onScroll);
-    return () => {
-      window.removeEventListener("scroll", onScroll);
-      window.removeEventListener("resize", onScroll);
-    };
-  }, []);
-
+export default function Hero({ wrapperRef, progress, pin }: HeroProps) {
   return (
     <div ref={wrapperRef} className="relative bg-ink" style={{ height: `calc(100vh + ${PIN_VH}vh)` }}>
       <section

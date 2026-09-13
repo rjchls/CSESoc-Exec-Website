@@ -1,10 +1,15 @@
 import PhotoSlot from "./PhotoSlot";
 
-export default function About() {
+type AboutProps = {
+  progress: number;
+};
+
+export default function About({ progress }: AboutProps) {
   return (
     <section
       id="about"
-      className="relative z-10 -mt-[18vh] grid w-full grid-cols-1 shadow-[0_-40px_60px_-20px_rgba(0,0,0,0.35)] md:grid-cols-2"
+      className="relative z-10 -mt-[100vh] grid w-full grid-cols-1 shadow-[0_-40px_60px_-20px_rgba(0,0,0,0.35)] md:grid-cols-2"
+      style={{ transform: `translateY(${(1 - progress) * 100}vh)` }}
     >
       <div className="flex flex-col justify-center bg-ink px-6 py-20 text-paper sm:px-10 sm:py-24 md:py-28">
         <h2 className="font-display text-[clamp(2.5rem,6vw,4.5rem)] leading-none text-paper uppercase">

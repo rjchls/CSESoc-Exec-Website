@@ -1,6 +1,6 @@
 export default function Visions() {
   return (
-    <section id="visions" className="w-full bg-ink px-6 py-24 text-paper sm:px-10 sm:py-32">
+    <section id="visions" className="relative z-10 w-full bg-ink px-6 py-24 text-paper sm:px-10 sm:py-32">
       <div className="mx-auto max-w-5xl">
         <span className="font-body text-xs font-semibold tracking-[0.2em] text-accent uppercase">
           Visions

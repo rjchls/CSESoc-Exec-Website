@@ -2,7 +2,7 @@ import Gallery from "./Gallery";
 
 export default function Experience() {
   return (
-    <section id="experience" className="w-full bg-cream px-6 py-24 sm:px-10 sm:py-32">
+    <section id="experience" className="relative z-10 w-full bg-cream px-6 py-24 sm:px-10 sm:py-32">
       <div className="mx-auto max-w-5xl">
         <span className="font-body text-xs font-semibold tracking-[0.2em] text-accent uppercase">
           Experience
