@@ -1,11 +1,11 @@
 import { useEffect, useRef, useState } from "react";
-import heroPhoto from "../assets/photos/herophoto.jpg";
+import heroPhoto from "../assets/photos/hero.jpg";
 import PhotoSlot from "./PhotoSlot";
 import Navbar from "./Navbar";
 
 // Extra scroll distance (beyond one viewport height) the hero stays pinned
 // for, while it blurs out and the next section slides up over it.
-const PIN_VH = 45;
+const PIN_VH = 100;
 
 export default function Hero() {
   const wrapperRef = useRef<HTMLDivElement>(null);
@@ -75,8 +75,8 @@ export default function Hero() {
         <div
           className="relative z-10 w-full px-6 pb-10 sm:px-10 sm:pb-14"
           style={{
-            opacity: Math.max(0, 1 - progress * 2.2),
-            transform: `translateY(${progress * 30}px)`,
+            opacity: Math.max(0, 1 - progress * 1.4),
+            transform: `translateY(${progress * 60}px)`,
           }}
         >
           <h1 className="font-display leading-[0.85] text-paper uppercase">
