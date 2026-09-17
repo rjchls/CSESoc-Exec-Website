@@ -63,7 +63,7 @@ export default function Typewriter({
   return (
     <span className={className}>
       {text.slice(0, count)}
-      <span className="ml-[0.1em] inline-block w-[0.5em] animate-[blink_1s_infinite]">|</span>
+      <span className="ml-[0.1em] animate-[blink_1s_infinite]">|</span>
     </span>
   );
 }

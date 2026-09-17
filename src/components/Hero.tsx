@@ -49,7 +49,7 @@ export default function Hero({ wrapperRef, progress, pin }: HeroProps) {
             style={{ opacity: 0.55 + progress * 0.45 }}
           />
 
-          <div className="relative z-10 w-full px-6 pb-24 sm:px-10 sm:pb-14">
+          <div className="relative z-10 w-full px-6 pb-[calc(7rem+env(safe-area-inset-bottom))] sm:px-10 sm:pb-14">
             <h1 className="font-display leading-[0.85] text-paper uppercase">
               <span className="mb-[0.08em] block text-[clamp(3.5rem,16vw,10rem)] sm:text-[clamp(3rem,13vw,10rem)]">Ryne</span>
               <span className="block text-[clamp(3.5rem,16vw,10rem)] sm:text-[clamp(3rem,13vw,10rem)]">Echaluse</span>
