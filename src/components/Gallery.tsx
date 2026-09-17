@@ -3,17 +3,25 @@ import useEmblaCarousel from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 import PhotoSlot from "./PhotoSlot";
 
-const SLIDES = [
-  "Socials event 1",
-  "Socials event 2",
-  "Socials event 3",
-  "Socials event 4",
-  "Socials event 5",
-];
+type GalleryProps = {
+  labelPrefix?: string;
+  count?: number;
+  photos?: (string | undefined)[];
+  captions?: (string | undefined)[];
+  objectPositions?: (string | undefined)[];
+};
 
-export default function Gallery() {
+export default function Gallery({
+  labelPrefix = "Socials event",
+  count = 5,
+  photos = [],
+  captions = [],
+  objectPositions = [],
+}: GalleryProps) {
+  const SLIDES = Array.from({ length: count }, (_, i) => `${labelPrefix} ${i + 1}`);
+
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
-    Autoplay({ delay: 3500, stopOnInteraction: false }),
+    Autoplay({ delay: 4000, stopOnInteraction: false }),
   ]);
   const [selectedIndex, setSelectedIndex] = useState(0);
 
@@ -33,16 +41,21 @@ export default function Gallery() {
   }, [emblaApi]);
 
   return (
-    <div className="w-full">
+    <div className="relative w-full">
       <div className="overflow-hidden rounded-sm" ref={emblaRef}>
         <div className="flex">
           {SLIDES.map((label, i) => (
-            <div key={i} className="min-w-0 flex-[0_0_100%] px-1 sm:flex-[0_0_60%]">
+            <div key={i} className="min-w-0 flex-[0_0_100%] px-1 sm:flex-[0_0_80%]">
               <PhotoSlot
+                src={photos[i]}
                 alt={`Socials memory ${i + 1}`}
                 label={`Gallery photo ${i + 1} — ${label} (replace in Gallery.tsx)`}
-                className="aspect-[4/5] w-full"
+                className="aspect-[3/2] w-full"
+                style={objectPositions[i] ? { objectPosition: objectPositions[i] } : undefined}
               />
+              <p className="mt-2 px-1 font-body text-sm text-ink/70">
+                {captions[i] ?? "[Add a caption for this photo]"}
+              </p>
             </div>
           ))}
         </div>

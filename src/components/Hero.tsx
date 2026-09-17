@@ -1,7 +1,6 @@
 import type { RefObject } from "react";
 import heroPhoto from "../assets/photos/hero.jpg";
 import PhotoSlot from "./PhotoSlot";
-import Navbar from "./Navbar";
 import Typewriter from "./Typewriter";
 
 // Extra scroll distance (beyond one viewport height) the hero stays pinned
@@ -16,7 +15,12 @@ type HeroProps = {
 
 export default function Hero({ wrapperRef, progress, pin }: HeroProps) {
   return (
-    <div ref={wrapperRef} className="relative bg-ink" style={{ height: `calc(100vh + ${PIN_VH}vh)` }}>
+    <div
+      ref={wrapperRef}
+      id="hero-wrapper"
+      className="relative bg-ink"
+      style={{ height: `calc(100vh + ${PIN_VH}vh)` }}
+    >
       <section
         className="h-screen overflow-hidden bg-ink"
         style={
@@ -38,7 +42,7 @@ export default function Hero({ wrapperRef, progress, pin }: HeroProps) {
             alt="Ryne Echaluse"
             label="Hero photo — portrait/landscape shot, full-bleed background (replace in Hero.tsx)"
             dark
-            className="absolute inset-0 h-full w-full object-top"
+            className="absolute inset-0 h-full w-full origin-[18%_1%] scale-[1.45] object-top sm:origin-center sm:scale-100"
           />
           <div
             className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/20 to-ink/10"
@@ -57,13 +61,9 @@ export default function Hero({ wrapperRef, progress, pin }: HeroProps) {
         </div>
 
         <div
-          style={{
-            opacity: Math.max(0, 1 - progress * 1.3),
-            pointerEvents: progress > 0.75 ? "none" : "auto",
-          }}
-        >
-          <Navbar />
-        </div>
+          className="pointer-events-none absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-ink to-transparent sm:h-56"
+          style={{ opacity: progress }}
+        />
       </section>
     </div>
   );
