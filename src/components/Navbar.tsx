@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { scrollToSection } from "../lib/scrollToSection";
 
 const LINKS = [
   { href: "#about", label: "About Me" },
@@ -72,9 +73,11 @@ export default function Navbar() {
   }, [open]);
 
   const handleClick = (href: string) => (e: React.MouseEvent) => {
+    e.preventDefault();
     if (href === "#about") {
-      e.preventDefault();
       scrollToAbout();
+    } else {
+      scrollToSection(href.slice(1));
     }
     setOpen(false);
   };

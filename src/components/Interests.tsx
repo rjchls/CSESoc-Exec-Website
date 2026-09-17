@@ -1,4 +1,5 @@
 import PhotoSlot from "./PhotoSlot";
+import { scrollToSection } from "../lib/scrollToSection";
 import c2s from "../assets/photos/c2s.jpg";
 import bigback from "../assets/photos/bigback.jpg";
 import w2e from "../assets/photos/w2e.jpg";
@@ -63,6 +64,10 @@ export default function Interests() {
 
         <a
           href="#experience"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToSection("experience");
+          }}
           className="mt-6 flex flex-col items-center gap-1.5 text-paper transition-colors hover:text-accent sm:mt-8"
         >
           <span className="font-body text-sm font-semibold tracking-[0.3em] uppercase">
