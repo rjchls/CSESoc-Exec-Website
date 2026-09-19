@@ -4,8 +4,16 @@ import socialsBouldering from "../assets/photos/socialsbouldering.jpg";
 import kiamating from "../assets/photos/kiamating.jpg";
 import goblin from "../assets/photos/goblin.jpg";
 import w4l from "../assets/photos/w4l.jpg";
+import sojubilants1 from "../assets/photos/sojubilants1.jpg";
+import sojubilants2 from "../assets/photos/sojubilants2.jpg";
+import sojubilants3 from "../assets/photos/sojubilants3.jpg";
+import sojubilants4 from "../assets/photos/sojubilants4.jpg";
 import Gallery from "./Gallery";
 import PhotoSlot from "./PhotoSlot";
+
+function Hl({ children }: { children: React.ReactNode }) {
+  return <mark className="bg-accent px-1 font-bold text-ink">{children}</mark>;
+}
 
 type ExperienceBlockProps = {
   id: string;
@@ -92,9 +100,10 @@ export default function Experience() {
           the broader Computer Science and Engineering community to help
           bring like-minded individuals together as a whole.</p>
             <p>Some of the key moments + achievements that summarise my time in Socials Subcommittee include:</p>
-            <p>- yap yap yap</p>
-            <p>- yap yap yap</p>
-            <p>- yap yap yap</p>
+            <p>- Worked towards an overall goal of fostering a <Hl>stronger sense of connection</Hl> amongst the broader CSE community</p>
+            <p>- Learnt the processes behind planning, organising and running of many <Hl>welcoming & casual events</Hl> with a priority of <Hl>empowering the bond</Hl>
+              amongst the CSE community. 
+            </p>- Worked alongside a team of 7 Subcommittee members to co-organise various <Hl>philanthropic events, sporting events, art events</Hl> and many other <Hl>low-pressure social events !</Hl>
           </>
         }
         galleryCaption="Socials Subcom through my eyes 🥹"
@@ -142,6 +151,9 @@ export default function Experience() {
           </>
         }
         galleryCaption="FYC through my eyes"
+        galleryLabelPrefix="Camp event"
+        galleryPhotos={[sojubilants1, sojubilants2, sojubilants3, sojubilants4]}
+        galleryCount={4}
       />
     </>
   );
