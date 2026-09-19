@@ -4,6 +4,11 @@ import socialsBouldering from "../assets/photos/socialsbouldering.jpg";
 import kiamating from "../assets/photos/kiamating.jpg";
 import goblin from "../assets/photos/goblin.jpg";
 import w4l from "../assets/photos/w4l.jpg";
+import directorexec from "../assets/photos/directorexec.jpg";
+import pmkickoff from "../assets/photos/pmkickoff.jpg";
+import sportsDay from "../assets/photos/sports_day.jpg";
+import ball from "../assets/photos/ball.jpg";
+import tassie from "../assets/photos/tassie.jpg";
 import sojubilants1 from "../assets/photos/sojubilants1.jpg";
 import sojubilants2 from "../assets/photos/sojubilants2.jpg";
 import sojubilants3 from "../assets/photos/sojubilants3.jpg";
@@ -56,7 +61,7 @@ function ExperienceBlock({
           {heading}
         </h2>
 
-        <div className="mt-8 max-w-2xl space-y-4 font-body text-base leading-relaxed text-ink/80 sm:text-lg">
+        <div className="mt-8 max-w-4xl space-y-4 font-body text-base leading-relaxed text-ink/80 sm:text-lg">
           {paragraph}
         </div>
 
@@ -99,9 +104,9 @@ export default function Experience() {
           the last 2 years has not only allowed me to grow immensely as an individual, but also immerse myself amongst
           the broader Computer Science and Engineering community to help
           bring like-minded individuals together as a whole.</p>
-            <p>Some of the key moments + achievements that summarise my time in Socials Subcommittee include:</p>
+            <p className="font-bold">Notable Achievements:</p>
             <p>- Worked towards an overall goal of fostering a <Hl>stronger sense of connection</Hl> amongst the broader CSE community</p>
-            <p>- Learnt the processes behind planning, organising and running of many <Hl>welcoming & casual events</Hl> with a priority of <Hl>empowering the bond</Hl>
+            <p>- Learnt the processes behind <Hl>planning, organising and running</Hl> of many <Hl>welcoming & casual events</Hl> with a priority of <Hl>empowering the bond</Hl>
               amongst the CSE community. 
             </p>- Worked alongside a team of 7 Subcommittee members to co-organise various <Hl>philanthropic events, sporting events, art events</Hl> and many other <Hl>low-pressure social events !</Hl>
           </>
@@ -127,14 +132,31 @@ export default function Experience() {
         heading="Socials Director 2026 🙈"
         paragraph= {
           <>
-            <p> - peer mentoring (300+ incoming first year students), challenging yet rewarding experience
+            <p>Taking the next step as a director for the Socials Subcommitee pushed me even further as an individual in helping run slightly larger-scale operations
+              with a smaller team to further support the interconnectedness of the CSE community, especially amongst the
+              incoming first-year cohort.
+            </p>
+            <p className="font-bold">Notable achievements:</p>
+            <p> - Organised <Hl>CSESoc's Flagship Peer Mentoring Program</Hl>, which consisted of conducting interviews to select <Hl>74 mentors</Hl> from a total batch of 100+ unique applicants to lead <Hl>270+ First Year Mentees.</Hl> Challenging yet rewarding experience
             that helped foster a greater sense of community amongst the CSE community and also allow me to 
             engage at a closer and more personal level with it as well.</p>
-            <p>- Helping lead and manage an amazing Socials Subcommittee team which focused on </p>
+            <p>- <Hl>Partnered with various other societies</Hl> throughout the year to help organise events that target the multifaceted interests of the broader CSE community. Notable partnership events include:
+                <Hl>CSESoc x Engsoc Sports Day</Hl> which brought together over <Hl>100+ participants</Hl> from both Peer Mentoring Groups, <Hl>CSESoc x MCBS x MedSoc Mahjong Night</Hl> and <Hl>CSESoc x BoulderSoc Bouldering Night.</Hl>
+            </p>
+            <p>- Helping <Hl>lead and manage a new Socials Subcommittee</Hl> team who worked together to co-organise various Socials events</p>
           </>
         }
-        galleryCaption="Photos from my term as Director"
+        galleryCaption="Socials Directorship through my eyes 👀"
         galleryLabelPrefix="Director event"
+        galleryPhotos={[directorexec, pmkickoff, ball, sportsDay, tassie]}
+        galleryPhotoCaptions={[
+          "2026 Director & Executive Team 🫶",
+          "CSESoc Peer Mentoring Kickoff 🎉",
+          "Sochalants @ CSESoc Ball 💃",
+          "CSESoc x Engsoc Sports Day 🏅",
+          "Sochalants takes on Tassie hehe 🏔️",
+        ]}
+        galleryCount={5}
       />
 
       <ExperienceBlock
