@@ -6,6 +6,7 @@ import Experience from "./components/Experience";
 import WhyExecship from "./components/WhyExecship";
 import Visions from "./components/Visions";
 import Footer from "./components/Footer";
+import ContactBar from "./components/ContactBar";
 import Navbar from "./components/Navbar";
 import { useHeroScrollProgress } from "./hooks/useHeroScrollProgress";
 
@@ -23,6 +24,7 @@ export default function App() {
       <WhyExecship />
       <Visions />
       <Footer />
+      <ContactBar />
     </div>
   );
 }
