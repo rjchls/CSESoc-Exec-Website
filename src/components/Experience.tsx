@@ -132,16 +132,16 @@ export default function Experience() {
         heading="Socials Director 2026 🙈"
         paragraph= {
           <>
-            <p>Taking the next step as a director for the Socials Subcommitee pushed me even further as an individual in helping run slightly larger-scale operations
+            <p>Taking the next step as a director for the Socials Subcommittee pushed me even further as an individual in helping run slightly larger-scale operations
               with a smaller team to further support the interconnectedness of the CSE community, especially amongst the
               incoming first-year cohort.
             </p>
-            <p className="font-bold">Notable achievements:</p>
-            <p> - Organised <Hl>CSESoc's Flagship Peer Mentoring Program</Hl>, which consisted of conducting interviews to select <Hl>74 mentors</Hl> from a total batch of 100+ unique applicants to lead <Hl>270+ First Year Mentees.</Hl> Challenging yet rewarding experience
+            <p className="font-bold">Notable Achievements:</p>
+            <p> - Organised <Hl>CSESoc's Flagship Peer Mentoring Program</Hl>, which consisted of conducting interviews to select <Hl>74 mentors</Hl> from a total batch of 100+ unique applicants to lead <Hl>270+ First-Year Mentees.</Hl> A Challenging yet rewarding experience
             that helped foster a greater sense of community amongst the CSE community and also allow me to 
             engage at a closer and more personal level with it as well.</p>
             <p>- <Hl>Partnered with various other societies</Hl> throughout the year to help organise events that target the multifaceted interests of the broader CSE community. Notable partnership events include:
-                <Hl>CSESoc x Engsoc Sports Day</Hl> which brought together over <Hl>100+ participants</Hl> from both Peer Mentoring Groups, <Hl>CSESoc x MCBS x MedSoc Mahjong Night</Hl> and <Hl>CSESoc x BoulderSoc Bouldering Night.</Hl>
+                <Hl>CSESoc x EngSoc Sports Day</Hl> which brought together over <Hl>100+ participants</Hl> from both Peer Mentoring Groups, <Hl>CSESoc x MCBS x MedSoc Mahjong Night</Hl> and <Hl>CSESoc x BoulderSoc Bouldering Night.</Hl>
             </p>
             <p>- Helping <Hl>lead and manage a new Socials Subcommittee</Hl> team who worked together to co-organise various Socials events</p>
           </>
@@ -153,7 +153,7 @@ export default function Experience() {
           "2026 Director & Executive Team 🫶",
           "CSESoc Peer Mentoring Kickoff 🎉",
           "Sochalants @ CSESoc Ball 💃",
-          "CSESoc x Engsoc Sports Day 🏅",
+          "CSESoc x EngSoc Sports Day 🏅",
           "Sochalants takes on Tassie hehe 🏔️",
         ]}
         galleryCount={5}
@@ -166,8 +166,8 @@ export default function Experience() {
         paragraph={
           <>
             <p>At the beginning of my Directorship year in CSESoc, I was given the opportunity to volunteer as a camp leader for CSESoc's Flagship First-Year Camp.</p>
-            <p className="font-bold">Notable achievements:</p>
-            <p>- <Hl>Led a group of 8 first-year CSE students</Hl> across a 3-day Camp</p>
+            <p className="font-bold">Notable Achievements:</p>
+            <p>- <Hl>Led a group of 8 first-year CSE students</Hl> across a 3-day camp</p>
             <p>- Demonstrated <Hl>strong leadership skills and promoted camaraderie and teamwork</Hl> across various different activities, ultimately strengthening the bond amongst the first-years in the CSE community</p>
             <p><Hl>SHOUTOUT TO MY LOVELY SOJUBILANTS &lt;3</Hl></p>
           </>

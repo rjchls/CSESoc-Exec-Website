@@ -37,7 +37,7 @@ export default function About({ progress }: AboutProps) {
             studying Computer Science / Electrical Engineering !
           </p>
           <p>
-            On top that, I'm also one of the current Socials Directors for
+            On top of that, I'm also one of the current Socials Directors for
             CSESoc...
           </p>
           <p className="font-body text-lg font-bold text-accent sm:text-xl">

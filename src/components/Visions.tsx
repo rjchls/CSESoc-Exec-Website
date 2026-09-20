@@ -15,13 +15,13 @@ const VISIONS = [
     heading:
       "SUPPORTING THE INTERNAL TEAM",
     description:
-      "Promote a tight-knitted internal community --> strong interport relationships to facilitate",
+      "Promote a tight-knit internal community --> strong interport relationships to facilitate",
   },
   {
     heading:
       "PRIORITISING QUALITY OVER QUANTITY",
     description:
-      "In terms of events / initoatives --> less is more (ensuring that the quality of our events is not undermined by the quantity of them).Maintaining and supporting the quality of the internal team, to ensure that the underlying operations that make CSESoc what it is run smoothly and to its highest possible standard",
+      "In terms of events / initiatives --> less is more (ensuring that the quality of our events is not undermined by the quantity of them).Maintaining and supporting the quality of the internal team, to ensure that the underlying operations that make CSESoc what it is run smoothly and to its highest possible standard",
   },
 ];
 
