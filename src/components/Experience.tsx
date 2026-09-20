@@ -165,16 +165,22 @@ export default function Experience() {
         heading="CSESoc First Year Camp Leader 2026 🫪"
         paragraph={
           <>
-            <p>- Led a small group of first-year CSE students across a 3-day Camp</p>
-            <p>- Demonstrated strong leadership skills and promoted camaraderie and teamwork
-              across various different activities </p>
-            <p>- Strengthened an overarching sense of community amongst the first-years within the CSE community</p>
-            <p>Shoutout my lovely #sojubilants</p>
+            <p>At the beginning of my Directorship year in CSESoc, I was given the opportunity to volunteer as a camp leader for CSESoc's Flagship First-Year Camp.</p>
+            <p className="font-bold">Notable achievements:</p>
+            <p>- <Hl>Led a group of 8 first-year CSE students</Hl> across a 3-day Camp</p>
+            <p>- Demonstrated <Hl>strong leadership skills and promoted camaraderie and teamwork</Hl> across various different activities, ultimately strengthening the bond amongst the first-years in the CSE community</p>
+            <p><Hl>SHOUTOUT TO MY LOVELY SOJUBILANTS &lt;3</Hl></p>
           </>
         }
         galleryCaption="FYC through my eyes"
         galleryLabelPrefix="Camp event"
         galleryPhotos={[sojubilants1, sojubilants2, sojubilants3, sojubilants4]}
+        galleryPhotoCaptions={[
+          "UP THE SOJUBILANTS 🍾",
+          "BEST CAMP GROUP EVA 🥺",
+          "COMPLETING DA CHALLENGES HEHE 🔥",
+          "#tuff #auraful #nonch😎"
+        ]}
         galleryCount={4}
       />
     </>
