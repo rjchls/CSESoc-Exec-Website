@@ -1,10 +1,11 @@
 import PhotoSlot from "./PhotoSlot";
+import Hl from "./Hl";
 import bbq from "../assets/photos/bbq.jpg";
 import socwide from "../assets/photos/socwide.jpg";
 
 type Vision = {
   heading: string;
-  points: string[];
+  points: React.ReactNode[];
   align: "left" | "center" | "right";
   showPhoto?: boolean;
   photo?: string;
@@ -21,8 +22,8 @@ const VISIONS: Vision[] = [
     showPhoto: true,
     photo: bbq,
     points: [
-      "Continue to engage with the broader CSE community through running welcoming events that bring together students across diverse backgrounds and drives an overarching sense of community",
-      "Prioritise listening to the voices of students amongst the CSE community to ensure that all their needs are met such that each individual feels heard and a part of their community",
+      <>Continue to <Hl>engage with the broader CSE community</Hl> through <Hl>running welcoming events</Hl> that bring together students across diverse backgrounds and drive an overarching sense of community</>,
+      <><Hl>Prioritise listening to the voices of students</Hl> amongst the CSE community to ensure that all their needs are met such that each individual feels heard and a part of their community</>,
     ],
   },
   {
@@ -30,8 +31,8 @@ const VISIONS: Vision[] = [
       "REPRESENTING THE SOCIETY",
     align: "center",
     points: [
-      "Aim to continue to upholding close CSESoc relations with the CSE Faculty and other partners (including external partnerships with other societies and companies) as part of its representative body",
-      "This includes maintaining constant contact with the Faculty, aligning with its values and providing the best possible support to all students by incorporating feedback",
+      <>Aim to continue to <Hl>uphold close CSESoc relations</Hl> with the CSE Faculty and other partners (including external partnerships with other societies and companies) as part of its representative body</>,
+      <>This includes <Hl>maintaining constant contact</Hl> with the Faculty, <Hl>aligning with its values</Hl> and providing the best possible support to all students by incorporating feedback</>,
     ],
   },
   {
@@ -44,8 +45,8 @@ const VISIONS: Vision[] = [
     photoClassName: "origin-[100%_75%] scale-[1.04]",
     textAtTop: true,
     points: [
-      "Aim to promote a tight-knit internal team with strong interport relationships to facilitate a society that functions cohesively",
-      "Maintaining constant communication and regularly checking in with each portfolio to address any potential concerns"
+      <>Aim to <Hl>promote a tight-knit internal team</Hl> with strong cross-portfolio relationships to facilitate a society that functions cohesively</>,
+      <><Hl>Maintain constant communication</Hl> and regularly check in with each portfolio to address any potential concerns</>
     ],
   },
   {
@@ -53,8 +54,8 @@ const VISIONS: Vision[] = [
       "PRIORITISING QUALITY OVER QUANTITY",
     align: "center",
     points: [
-      "In terms of events / initiatives, ensure that the quality of the society's events are not undermined by the sheer quantity of events being run. Focus on diversifying events such that we are targetting a broader audience with quality events rather than a smaller audience with similar events",
-      "Maintaining and supporting the quality of the work put out by the internal team",
+      <>In terms of events / initiatives, ensure that the quality of the society's events is not undermined by the sheer quantity of events being run. Focus on <Hl>diversifying events</Hl> such that we are targeting a broader audience with quality events rather than a smaller audience with similar events</>,
+      <><Hl>Maintain and support the quality</Hl> of the work put out by the internal team</>,
     ],
   },
 ];
@@ -103,14 +104,14 @@ export default function Visions() {
                       vision.showPhoto ? "max-w-2xl" : "max-w-4xl"
                     } ${LIST_BORDER[align]}`}
                   >
-                    {vision.points.map((point) =>
+                    {vision.points.map((point, p) =>
                       align === "center" ? (
-                        <li key={point}>
+                        <li key={p}>
                           <span aria-hidden className="mr-3 inline-block h-1.5 w-1.5 rounded-full bg-accent align-middle" />
                           {point}
                         </li>
                       ) : (
-                        <li key={point} className={`flex gap-3 ${align === "right" ? "flex-row-reverse" : ""}`}>
+                        <li key={p} className={`flex gap-3 ${align === "right" ? "flex-row-reverse" : ""}`}>
                           <span aria-hidden className="mt-[0.7em] h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
                           <span>{point}</span>
                         </li>

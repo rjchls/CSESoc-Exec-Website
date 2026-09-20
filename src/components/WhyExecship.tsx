@@ -11,12 +11,12 @@ export default function WhyExecship() {
         </h2>
 
         <div className="mt-8 max-w-4xl border-l-2 border-dashed border-ink/25 pl-6 font-body text-base leading-relaxed text-ink/50 italic sm:text-lg">
-          Without a doubt, my time in CSESoc has been the most rewarding experience I've ever had across my 2 years spent at UNSW. My time in Socials has been a great privilege where aside from being deeply involved in 
-          bringing the community together, it has also allowed me to meet so many new faces, make lifelong friends, and make countless new memories. And so, as a personal incentive, execship feels like the 
+          Without a doubt, my time in CSESoc has been the most rewarding experience I've ever had across my 2 years spent at UNSW. My time in Socials has been a great privilege, not only because I have been deeply involved in 
+          bringing the community together, but also because it has allowed me to meet so many new faces, make lifelong friends, and make countless new memories. And so, as a personal incentive, execship feels like the 
           final step through which I can give back to the CSE community and continue to push forward the same positive experiences that CSESoc gave me in my time spent at UNSW.
         </div>
         <div className="mt-8 max-w-4xl border-l-2 border-dashed border-ink/25 pl-6 font-body text-base leading-relaxed text-ink/50 italic sm:text-lg">
-          And I hope to achieve this through the roles of Co-Pres and VPE which both focus on the internal + external operations that work towards bringing the society and the broader CSE community together as a whole.
+          And I hope to achieve this through the roles of Co-Pres and VPE, which both focus on the internal + external operations that work towards bringing the society and the broader CSE community together as a whole.
         </div>
       </div>
     </section>
