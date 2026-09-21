@@ -9,6 +9,7 @@ import Footer from "./components/Footer";
 import ContactBar from "./components/ContactBar";
 import Navbar from "./components/Navbar";
 import { useHeroScrollProgress } from "./hooks/useHeroScrollProgress";
+import { Analytics } from "@vercel/analytics/react";
 
 export default function App() {
   const heroWrapperRef = useRef<HTMLDivElement>(null);
@@ -16,6 +17,7 @@ export default function App() {
 
   return (
     <div className="w-full bg-cream">
+      <Analytics />
       <Navbar />
       <Hero wrapperRef={heroWrapperRef} progress={progress} pin={pin} />
       <About progress={progress} />
