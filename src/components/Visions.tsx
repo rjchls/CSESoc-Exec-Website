@@ -31,7 +31,7 @@ const VISIONS: Vision[] = [
       "REPRESENTING THE SOCIETY",
     align: "center",
     points: [
-      <>Aim to continue to <Hl>uphold close CSESoc relations</Hl> with the CSE Faculty and other partners (including external partnerships with other societies and companies) as part of its representative body</>,
+      <>Continue to <Hl>uphold close CSESoc relations</Hl> with the CSE Faculty and other partners (including external partnerships with other societies and companies) as part of its representative body</>,
       <>This includes <Hl>maintaining constant contact</Hl> with the Faculty, <Hl>aligning with its values</Hl> and providing the best possible support to all students by incorporating feedback</>,
     ],
   },

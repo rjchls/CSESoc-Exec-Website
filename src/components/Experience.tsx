@@ -103,8 +103,7 @@ export default function Experience() {
           bring like-minded individuals together as a whole.</p>
             <p className="font-bold">Notable Achievements:</p>
             <p>- Worked towards an overall goal of fostering a <Hl>stronger sense of connection</Hl> amongst the broader CSE community</p>
-            <p>- Learnt the processes behind <Hl>planning, organising and running</Hl> of many <Hl>welcoming & casual events</Hl> with a priority of <Hl>empowering the bond</Hl>
-              amongst the CSE community. 
+            <p>- Learnt the processes behind <Hl>planning, organising and running</Hl> of many <Hl>welcoming & casual events</Hl> with a priority of <Hl>empowering the bond</Hl> amongst the CSE community. 
             </p>- Worked alongside a team of 7 Subcommittee members to co-organise various <Hl>philanthropic events, sporting events, art events</Hl> and many other <Hl>low-pressure social events !</Hl>
           </>
         }
@@ -137,8 +136,7 @@ export default function Experience() {
             <p> - Organised <Hl>CSESoc's Flagship Peer Mentoring Program</Hl>, which consisted of conducting interviews to select <Hl>74 mentors</Hl> from a total batch of 100+ unique applicants to lead <Hl>270+ First-Year Mentees.</Hl> A challenging yet rewarding experience
             that helped foster a greater sense of community amongst the CSE community and also allow me to 
             engage at a closer and more personal level with it as well.</p>
-            <p>- <Hl>Partnered with various other societies</Hl> throughout the year to help organise events that target the multifaceted interests of the broader CSE community. Notable partnership events include:
-                <Hl>CSESoc x EngSoc Sports Day</Hl>, which brought together <Hl>100+ participants</Hl> from both Peer Mentoring Groups, <Hl>CSESoc x MCBS x MedSoc Mahjong Night</Hl> and <Hl>CSESoc x BoulderSoc Bouldering Night.</Hl>
+            <p>- <Hl>Partnered with various other societies</Hl> throughout the year to help organise events that target the multifaceted interests of the broader CSE community. Notable partnership events include: <Hl>CSESoc x EngSoc Sports Day</Hl>, which brought together <Hl>100+ participants</Hl> from both Peer Mentoring Groups, <Hl>CSESoc x MCBS x MedSoc Mahjong Night</Hl> and <Hl>CSESoc x BoulderSoc Bouldering Night.</Hl>
             </p>
             <p>- Helped <Hl>lead and manage a new Socials Subcommittee</Hl> team who worked together to co-organise various Socials events</p>
           </>
